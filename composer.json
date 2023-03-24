@@ -2,6 +2,8 @@
     "name": "backendave/ave-library",
     "description": "libreria para desencriptar token",
     "type": "library",
+    "keywords": ["aveonline", "avegroup"],
+    "license": "MIT",
     "require": {
         "firebase/php-jwt": "^6.4"
     },
