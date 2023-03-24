@@ -21,9 +21,9 @@ class Avelibrary
         $this->passphrase =  $passphrase;
     }
 
-    public function GetData($token, $keyPath)
+    public function GetData($token, $content)
     {
-        $keyPublic = openssl_get_publickey(file_get_contents($keyPath));
+        $keyPublic = openssl_get_publickey($content);
 
         $dataToken = JWT::decode($token, new Key($keyPublic, self::$encryptSSL));
 
