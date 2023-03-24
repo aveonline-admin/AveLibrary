@@ -1,6 +1,6 @@
 <?php
 
-namespace  Backendave\Avelibrary;
+namespace  Backend;
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
@@ -21,7 +21,7 @@ class Avelibrary
         $this->passphrase =  $passphrase;
     }
 
-    public function GetData($token, $contentKey)
+    public function getdata($token, $contentKey)
     {
         $keyPublic = openssl_get_publickey($contentKey);
 
