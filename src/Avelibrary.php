@@ -1,6 +1,6 @@
 <?php
 
-namespace  BackendAve\AveLibrary;
+namespace  backendAve\avelibrary;
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
@@ -21,7 +21,7 @@ class Avelibrary
         $this->passphrase =  $passphrase;
     }
 
-    public static function GetData($token, $keyPath)
+    public function GetData($token, $keyPath)
     {
         $keyPublic = openssl_get_publickey(file_get_contents($keyPath));
 
@@ -33,7 +33,7 @@ class Avelibrary
     }
 
 
-    static function secured_decrypt($inputData)
+    private function secured_decrypt($inputData)
     {
         $first_key = base64_decode(self::$secret_key);
         $second_key = base64_decode(self::$passphrase);
