@@ -1,6 +1,6 @@
 <?php
 
-namespace  backendave\avelibrary;
+namespace  Backendave\Avelibrary;
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
