@@ -1,5 +1,5 @@
 {
-    "name": "backendave/ave-library",
+    "name": "backendave/avelibrary",
     "description": "libreria para desencriptar token",
     "type": "library",
     "keywords": ["aveonline", "avegroup"],
