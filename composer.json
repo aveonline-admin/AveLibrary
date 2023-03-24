@@ -2,14 +2,12 @@
     "name": "backendave/ave-library",
     "description": "libreria para desencriptar token",
     "type": "library",
-    "keywords": ["aveonline", "avegroup"],
-    "license": "MIT",
     "require": {
         "firebase/php-jwt": "^6.4"
     },
     "autoload": {
         "psr-4": {
-            "Backend\\": "src/"
+            "Backendave\\AveLibrary\\": "AveLibrary/src/"
         }
     },
     "authors": [
@@ -20,4 +18,3 @@
     ],
     "minimum-stability": "stable"
 }
-

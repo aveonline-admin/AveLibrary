@@ -8,10 +8,10 @@ use Firebase\JWT\Key;
 class Avelibrary
 {
 
-    private static $secret_key;
-    private static $encrypt;
-    private static $encryptSSL;
-    private static $passphrase;
+    private $secret_key;
+    private $encrypt;
+    private $encryptSSL;
+    private $passphrase;
 
     public function __construct($secret_key, $encrypt, $encryptSSL, $passphrase)
     {
@@ -27,7 +27,7 @@ class Avelibrary
 
         $dataToken = JWT::decode($token, new Key($keyPublic, self::$encryptSSL));
 
-        $data = self::secured_decrypt($dataToken->data);
+        $data = $this->secured_decrypt($dataToken->data);
 
         return $data;
     }
